@@ -15,8 +15,8 @@ function trailingSpaceOnly(src, start, max) {
   return true;
 }
 
-const DEFAULT_ATTRIBUTE_REGEX = /^\s*=(.+)$/;
-const ATTRIBUTE_REGEX = /([a-z0-9]*)\s*=((?:".*?")|(?:'.*?')|(?:“.*?”)|\S+)/gi;
+const DEFAULT_ATTRIBUTE_REGEX = /^\s*=(.+?)(?:\s|$)/;
+const ATTRIBUTE_REGEX = /([a-z0-9]+)\s*=((?:".*?")|(?:'.*?')|(?:“.*?”)|\S+)/gi;
 const QUOTE_REGEX = /^(?:'.*'|^".*"|“.*?”)$/;
 
 function transformAttributeValue(originalValue) {
